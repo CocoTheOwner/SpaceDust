@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Space : MonoBehaviour
 {
-    public GameObject asteroidPrefab;
+    public List<GameObject> asteroidPrefabs;
     private List<GameObject> asteroids = new List<GameObject>();
 
     // Start is called before the first frame update
@@ -24,6 +24,8 @@ public class Space : MonoBehaviour
 
             // Generate a random scale
             float scale = Random.Range(0.5f, 2f);
+
+            GameObject asteroidPrefab = asteroidPrefabs[Random.Range(0, asteroidPrefabs.Count)];
 
             // Instantiate the asteroid
             GameObject asteroid = Instantiate(asteroidPrefab, position, rotation);

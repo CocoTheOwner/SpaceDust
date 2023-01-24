@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ship : MonoBehaviour
+public class PlayerShipMovement : MonoBehaviour
 {
 
     // The current velocity of the ship
